@@ -3,6 +3,10 @@ skype-media-download
 
 A simple python script to download shared images.
 
+Reads Skype's main.db sqlite database and finds shared media, extracting their web links and downloads them.
+
+Note: From some limited testing it seems Skype only started including the links this script uses in its database after late 2014, so it may not work with databases older than that.
+
 Usage
 =====
 

@@ -31,3 +31,7 @@ Usage
 
 Log in to web.skype.com, then export your browsers cookies. The script needs these to access the media.
 After that find your Skype installation's main.db file. On Windows it's located somewhere under %AppData%, on Linux it's somwhere in your home directory and on Android it's under /data/data, which you need root to access.
+
+The dry run option is useful if you just want to get the links to the media files to use for later. All links are written to stdout and all other comments on stderr, so to save said links to a file simply use for example tee:
+
+	skype-media-download.py | tee saveLinksHere.txt

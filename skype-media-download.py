@@ -19,7 +19,6 @@ SELECT Messages.id,Messages.timestamp,Messages.author,Conversations.displayname,
 INNER JOIN Conversations ON Messages.convo_id=Conversations.id
 WHERE Messages.type=201;
 """
-#WHERE Messages.id=164293
 helpMessage = "Usage: " + os.path.basename(sys.argv[0]) + """ [OPTIONS]
 
 Downloads shared media that is found in messages in Skype's main.db file.
@@ -98,10 +97,6 @@ if not os.path.exists(databaseFile):
 if not os.path.exists(pathPrefix):
     eprint ("Output path '", pathPrefix, "' does not exist. Exiting..", sep='')
     exit()
-
-#if successLog and os.path.exists(errorLogFile):
-#    eprint ("Error log file '", errorLogFile, "' already exists. Exiting..", sep='')
-#    exit()
 
 # Load previously downloaded links
 if successLog and os.path.exists(successLogFile):
